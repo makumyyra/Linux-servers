@@ -27,3 +27,7 @@ nel vii kuu, nel vii kuu,
 hauskaa kieltä laulaa suut.
 
     System.out.println("Kvikvikvik, lallalla" * 100000);
+
+## Pingviinilinkki
+
+[Pingviinit (Wikipedia)](https://en.wikipedia.org/wiki/Penguin)
