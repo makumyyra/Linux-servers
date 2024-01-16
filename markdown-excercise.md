@@ -14,11 +14,11 @@ Siellä mä ystäväni nähdä sain:
 Mulle hän vihelteli mielissään,
 Tanssimaan tuli tänne 
 
-   if(temperature > 0) {
-   System.out.println("lämpimään");
-   } else {
-   System.out.println("viileään");
-
+    if(temperature > 0) {
+    System.out.println("lämpimään");
+    } else {
+    System.out.println("viileään");
+ 
 ### Kertosäe
 
 Yy kaa koo, yy kaa koo,
