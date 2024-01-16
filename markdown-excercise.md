@@ -13,6 +13,7 @@ Siellä mä ystäväni nähdä sain:
 
 Mulle hän vihelteli mielissään,
 Tanssimaan tuli tänne 
+
    if(temperature > 0) {
    System.out.println("lämpimään");
    } else {
