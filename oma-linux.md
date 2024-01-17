@@ -28,6 +28,7 @@ laitteisto, ympäristö ja kellonaika sekä mitä painoit, mitä tapahtui
     - vapaus jakaa kopioita ohjelmasta
     - vapaus jakaa kopioita omasta muokatusta ohjelmasta muiden hyödyksi (+ pääsy lähdekoodiin)
 
+
 - vapaa ohjelmisto voi olla kaupallista
 
 - kehitys voi johtaa maksulliseen palveluun (esim. tekninen tuki)
