@@ -1,6 +1,7 @@
 # Artikkelitiivistelmät
 
-## Raportin kirjoittaminen
+
+## Artikkeli 1: Raportointi
 
 - raportti kirjoitetaan sekä itselle muistin tueksi että toisille dokumentiksi
 
@@ -17,7 +18,7 @@ laitteisto, ympäristö ja kellonaika sekä mitä painoit, mitä tapahtui
 
 
 
-## Vapaa ohjelmisto
+## Artikkeli 2: Vapaa ohjelmisto
 
 - vapaa ohjelmisto, free software, antaa käyttäjälle mahdollisuuden muokata, käyttää ja jakaa ohjelmistoa vapaasti
 
