@@ -33,6 +33,7 @@ Tämän jälkeen kysymykset
 --> dev/Sda
 
 Näiden jälkeen asennus oli valmis. Virtuaalikone käynnistyi itsestään uudelleen.
+
 (Sammakkosuo, Petri 17.1.2024. Suullinen tiedonanto.)
 
 
