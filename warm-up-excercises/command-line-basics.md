@@ -37,7 +37,7 @@ Seuraava komento ei onnistunut:
 ```` sudo npm install wikit -g ````
 
 Vikailmoitus klo 13:48:
-![komentoa ei löytynyt](C:\Users\Omistaja\Pictures\Linux\npm.JPG)
+![komentoa ei löytynyt](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/npm.JPG)
 
 Asensin npm:n suullisen ohjeen (Petri Sammakkosuo) mukaan (sudo apt-get install npm). Tämän jälkeen yllä oleva komento toimi ja Wikit asentui.
 
@@ -55,10 +55,10 @@ Klo 14:08 olin asentanut ohjelmat
 Ensin käytin komentoa pwd. Olin äsken luomassani kansiossa /home/suvi/tiedostot. Menin komennolla cd .. kansioita ylöspäin.
 Juurihakemistossa listasin sisältöä rekursiivisesti, joka oli huono idea. Listattavaa oli todella paljon. Keskeytin listaamisen komennolla "q"
 
-[ls -R | less](C:\Users\Omistaja\Pictures\Linux\list_r.JPG)
+[ls -R | less](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/list_r.JPG)
 
 Juurikansion alakansiot/tiedostot listasin helposti komennolla ls.
-[ls -R | less](C:\Users\Omistaja\Pictures\Linux\list_root.JPG)
+[ls -R | less](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/list_root.JPG)
 
 
 
@@ -71,21 +71,21 @@ Lisäsin käyttäjän "kani":
 
 Tämän jälkeen home-kansiossa näkyi aakkosjärjestyksessä kaksi käyttäjää (kani, suvi).
 
-![käyttäjät](C:\Users\Omistaja\Pictures\Linux\home_kani_suvi.JPG)
+![käyttäjät](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/home_kani_suvi.JPG)
 
 Kotikansiossa listasin ls-komennolla alikansiot:
 
-![home/suvi](C:\Users\Omistaja\Pictures\Linux\suvihome_ls.JPG)
+![home/suvi](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/suvihome_ls.JPG)
 
 Etc-kansiossa listasin sisällön komennolla ls. Siellä luin kaksi lyhyttä tiedostoa komennolla "cat [tiedoston nimi]". 
-![cat_hosts](C:\Users\Omistaja\Pictures\Linux\etc_read.JPG)
+![cat_hosts](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/etc_read.JPG)
 
 
 Media-kansiossa ei ollut mitään muuta kuin tyhjät cdrom-kansiot:
-![cat_hosts](C:\Users\Omistaja\Pictures\Linux\media.JPG)
+![cat_hosts](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/media.JPG)
 
 Log-kansiossakaan ei ollut kovin paljon sisältöä. Luin sieltä README-tiedoston:
-![cat_hosts](C:\Users\Omistaja\Pictures\Linux\readme.JPG)
+![cat_hosts](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/readme.JPG)
 
 
 
@@ -98,4 +98,4 @@ g) Tukki. Aiheuta lokiin kaksi eri tapahtumaa: yksi esimerkki onnistuneesta ja y
 
 
 Lokiin aiheutin virheen yllä luodun kani-käyttäjän avulla. Vaihdoin käyttäjäksi kani ja yritin käyttää sudo apt-get updatea. Sain virheen, joka raportoitiin adminille. Kani ei ole sudoers-tiedostossa.
-![cat_hosts](C:\Users\Omistaja\Pictures\Linux\kani-not-sudo.JPG)
+![cat_hosts](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/kani-not-sudo.JPG)
