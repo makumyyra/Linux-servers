@@ -79,14 +79,17 @@ Kotikansiossa listasin ls-komennolla alikansiot:
 
 ![home/suvi](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/suvihome_ls.JPG)
 
-Etc-kansiossa listasin sisällön komennolla ls. Siellä luin kaksi lyhyttä tiedostoa komennolla "cat [tiedoston nimi]". 
+Etc-kansiossa listasin sisällön komennolla ls. Siellä luin kaksi lyhyttä tiedostoa komennolla "cat [tiedoston nimi]":
+
 ![cat_hosts](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/etc_read.JPG)
 
 
 Media-kansiossa ei ollut mitään muuta kuin tyhjät cdrom-kansiot:
+
 ![cat_hosts](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/media.JPG)
 
 Log-kansiossakaan ei ollut kovin paljon sisältöä. Luin sieltä README-tiedoston:
+
 ![cat_hosts](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/readme.JPG)
 
 
