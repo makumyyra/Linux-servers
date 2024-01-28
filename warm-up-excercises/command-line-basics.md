@@ -13,7 +13,7 @@ Kone Dell Latitude 7280
 
 Tehtävänä oli asentaa Micro-editori. Aloitin luomalla tiedostot-kansion. Siirryin kansioon ja yritin copy-pastella siirtää isäntäkoneelta asennustekstin virtuaalikoneelle. Tämä ei onnistunut, joten yritin seuraavaksi Input - Keyboard - Insert Host Key Kombo. Tämäkään ei onnistunut, ja virtuaalikoneeni meni tilaan, jossa se ei ottanut lainkaan tekstiä vastaan. 
 
-![vikatila](C:\Users\Omistaja\Pictures\Linux\vika270123.JPG)
+![vikatila](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/vika270123.JPG)
 
 Lähetin koneelle sammutussignaalin ja sen jälkeen käynnistin koneen uudelleen. Klo 13:20 kone käynnistyi uudelleen ja menin tekemääni tiedostot-kansioon. Tällä kertaa kirjoitin komennot käsin
 ``` curl https://getmic.ro | bash ```
