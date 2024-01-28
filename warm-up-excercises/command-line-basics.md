@@ -67,7 +67,7 @@ Juurikansion alakansiot/tiedostot listasin helposti komennolla ls.
 
 Lisäsin käyttäjän "kani":
 
-![adduser_kani](Linux-servers/md_images/adduser.JPG)
+![adduser_kani](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/adduser.JPG)
 
 Tämän jälkeen home-kansiossa näkyi aakkosjärjestyksessä kaksi käyttäjää (kani, suvi).
 
