@@ -1,17 +1,20 @@
 # Command Line Basics
 
-	- The command line is a fast and effective way to operate
-	- In command line you will be moving around in directories 
-	- You can create and work with directories and files (e.g. create and manipulate files)
-	- You can connect to a remote machine in a remote command shell
-	- The command line logs your operations so you can easily repeat them
-	- Administrative commands require administrative rights (sudo = super user do)
+## Command Line Basics Revisited - Summary
+- The command line is a fast and effective way to operate
+- In the command line, you will be moving around in directories 
+- You can create and work with directories and files (e.g. create and manipulate files)
+- You can connect to a remote machine in a remote command shell
+- The command line logs your operations so you can easily repeat them
+- Administrative commands require administrative rights (sudo = super user do)
 
-13:10 aloitin tekemään tehtäviä.
+28.01.2024, tehtävät aloitettu klo 13:10.  
 Kone Dell Latitude 7280
-*** tiedot
+Suoritin: Intel(R) Core(TM) i7-7600U CPU @ 2.80GHz   2.90 GHz
+Asennettu RAM: 16,0 Gt 
+Windowsin määritykset: Windows 10 Pro, versio 22H2
 
-Tehtävänä oli asentaa Micro-editori. Aloitin luomalla tiedostot-kansion. Siirryin kansioon ja yritin copy-pastella siirtää isäntäkoneelta asennustekstin virtuaalikoneelle. Tämä ei onnistunut, joten yritin seuraavaksi Input - Keyboard - Insert Host Key Kombo. Tämäkään ei onnistunut, ja virtuaalikoneeni meni tilaan, jossa se ei ottanut lainkaan tekstiä vastaan. 
+Ensimmäisenä tehtävänä oli asentaa Micro-editori. Aloitin luomalla tiedostot-kansion. Siirryin kansioon ja yritin copy-pastella siirtää isäntäkoneelta asennustekstin virtuaalikoneelle. Tämä ei onnistunut, joten yritin seuraavaksi Input - Keyboard - Insert Host Key Kombo. Tämäkään ei onnistunut, ja virtuaalikoneeni meni tilaan, jossa se ei ottanut lainkaan tekstiä vastaan. 
 
 ![vikatila](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/vika270123.JPG)
 
@@ -24,13 +27,12 @@ Tällä kertaa Micro asentui oikein.
 sudo apt-get update
 sudo apt-get -y install figlet
 
-Figlet ei näkynyt kohdekansiossa. 
-
+Figlet ei näkynyt kohdekansiossa. Figlet ei näkynyt kohdekansiossa. Suullinen tiedonanto (Petri Sammakkosuo): Figlet asentui ns. systeemisovellukseksi ja on asentunut johonkin systeemikansioon. 
 
 13:47 asennettu NodeJS sivun [Tecmint](https://www.tecmint.com/wikipedia-commandline-tool/) Debian-ohjeiden mukaan.
 Kirjoitin ensimmäisen komennon jälleen käsin:
 
-``` sudo apt-get install nodejs ````
+```` sudo apt-get install nodejs ````
 
 NodeJS asentui onnistuneesti.
 Seuraava komento ei onnistunut:
