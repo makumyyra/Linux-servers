@@ -7,27 +7,50 @@
 - You can connect to a remote machine in a remote command shell
 - The command line logs your operations so you can easily repeat them
 - Administrative commands require administrative rights (sudo = super user do)
+(Karvinen, T. 2020)
+
+## Hands-on homework  
 
 28.01.2024, tehtävät aloitettu klo 13:10.  
+
 Kone Dell Latitude 7280
 Suoritin: Intel(R) Core(TM) i7-7600U CPU @ 2.80GHz   2.90 GHz
 Asennettu RAM: 16,0 Gt 
 Windowsin määritykset: Windows 10 Pro, versio 22H2
 
+### Micro
+
 Ensimmäisenä tehtävänä oli asentaa Micro-editori. Aloitin luomalla tiedostot-kansion. Siirryin kansioon ja yritin copy-pastella siirtää isäntäkoneelta asennustekstin virtuaalikoneelle. Tämä ei onnistunut, joten yritin seuraavaksi Input - Keyboard - Insert Host Key Kombo. Tämäkään ei onnistunut, ja virtuaalikoneeni meni tilaan, jossa se ei ottanut lainkaan tekstiä vastaan. 
 
 ![vikatila](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/vika270123.JPG)
 
-Lähetin koneelle sammutussignaalin ja sen jälkeen käynnistin koneen uudelleen. Klo 13:20 kone käynnistyi uudelleen ja menin tekemääni tiedostot-kansioon. Tällä kertaa kirjoitin komennot käsin
+Lähetin koneelle sammutussignaalin ja sen jälkeen käynnistin koneen uudelleen. Klo 13:20 kone käynnistyi uudelleen ja menin tekemääni tiedostot-kansioon. Tällä kertaa kirjoitin komennot käsin. Komento:
 ``` curl https://getmic.ro | bash ```
 
 Tällä kertaa Micro asentui oikein.
 
-13:39 asennettu Figlet (fonttiohjelma) sivun [installati](https://installati.one/install-figlet-debian-11/) ohjeiden mukaan. Komennot järjestyksessä 
+### Rauta
+
+Asensin ensin lshw-ohjelmiston. Linuxin listaamat tiedot alla kuvassa:
+
+![vikatila](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/lshw.JPG)
+
+Järjestelmä on tietenkin VirtualBox, koska tietokone on luotu VirtualBoxin avulla. Muistiksi asetin virtuaalikonetta luodessani 4 GB, joka on kerrottu myös kuvassa. Prosessori on sama kuin oman fyysisen koneeni prosessori. Disk-kohdassa mainittu CD-ROM (jollaista asemaa läppäristäni ei löydy) on se, mihin virtuaalikoneessa "asetettiin" ISO-image. ISO-image toimii kuten järjestelmän asennus-CD, joten CD-ROM -asema on siksi tarpeellinen. Inputissa lukee mouse integration, joka lukee isäntäkoneen hiirenliikettä. 
+
+### Apt (Debianin "Advanced Package Tool")
+
+Tehtävässä piti asentaa kolme komentoriviohjelmaa. Asensin ohjelmat 
+- Figlet
+- Wikit
+- Cowsay
+- Fortune
+- Oneko
+
+Näistä ensimmäisenä asensin Figletin (fonttiohjelma) klo 13:39. Asensin sen sivun [installati](https://installati.one/install-figlet-debian-11/) ohjeiden mukaan. Komennot järjestyksessä 
 sudo apt-get update
 sudo apt-get -y install figlet
 
-Figlet ei näkynyt kohdekansiossa. Figlet ei näkynyt kohdekansiossa. Suullinen tiedonanto (Petri Sammakkosuo): Figlet asentui ns. systeemisovellukseksi ja on asentunut johonkin systeemikansioon. 
+Figlet ei näkynyt kohdekansiossa komennolla ls. Suullinen tiedonanto (Petri Sammakkosuo): Figlet asentui ns. systeemisovellukseksi ja on asentunut johonkin systeemikansioon. 
 
 13:47 asennettu NodeJS sivun [Tecmint](https://www.tecmint.com/wikipedia-commandline-tool/) Debian-ohjeiden mukaan.
 Kirjoitin ensimmäisen komennon jälleen käsin:
@@ -104,3 +127,8 @@ g) Tukki. Aiheuta lokiin kaksi eri tapahtumaa: yksi esimerkki onnistuneesta ja y
 
 Lokiin aiheutin virheen yllä luodun kani-käyttäjän avulla. Vaihdoin käyttäjäksi kani ja yritin käyttää sudo apt-get updatea. Sain virheen, joka raportoitiin adminille. Kani ei ole sudoers-tiedostossa.
 ![cat_hosts](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/kani-not-sudo.JPG)
+
+
+### Lähteet:
+Karvinen, Tero 2020. Command Line Basics Revisited. https://terokarvinen.com/2020/command-line-basics-revisited/?fromSearch=command%20line%20basics%20revisited Luettu 27.01.2024.
+Sammakkosuo, Petri. Suullinen tiedonanto 27.01.2024, 29.01.2024.
