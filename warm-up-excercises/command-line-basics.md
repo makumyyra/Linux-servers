@@ -134,14 +134,20 @@ Esimerkki putkista alla: grep | less. Less helpottaa pitkien tuloslistojen lukem
 
 ## Tukki
 
+Lokia pääsi Debianissa lukemaan komennolla ``` journalctl ``` (StackExchange, 2024). Viimeisimmät lokimerkinnät saa näkyviin komennolla ``` journalctl -f ```
+
 Lokiin aiheutin virheen yllä luodun kani-käyttäjän avulla. Vaihdoin käyttäjäksi kani ja yritin käyttää sudo apt-get updatea. Sain virheen, joka raportoitiin adminille. Kani ei ole sudoers-tiedostossa.
-![cat_hosts](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/kani-not-sudo.JPG)
+![kani-sudo](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/kani-not-sudo.JPG)
+![kani-sudo-fail](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/auth_fail.JPG)
 
-
-
+Onnistunut toiminto puolestaan oli suvi-käyttäjän lisääminen adm-ryhmään. Ohje löytyi Debian Wikistä System Group -osion alta (Debian Wiki, 2024). Adm-ryhmäläiset näkevät järjestelmäviestejä lokissa.
+![suvi-to-adm](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/admgroup.JPG)
+![suvi-adm-log](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/adduser_log.JPG)
 
 
 
 ### Lähteet:
 Karvinen, Tero 2020. Command Line Basics Revisited. https://terokarvinen.com/2020/command-line-basics-revisited/?fromSearch=command%20line%20basics%20revisited Luettu 27.01.2024.
 Sammakkosuo, Petri. Suullinen tiedonanto 27.01.2024, 29.01.2024.
+[Debian Wiki](https://wiki.debian.org/SystemGroups). Luettu 29.01.2024.
+[StackExchange](https://unix.stackexchange.com/questions/422213/how-to-see-the-latest-x-lines-from-systemctl-service-log). Luettu 29.01.2024.
