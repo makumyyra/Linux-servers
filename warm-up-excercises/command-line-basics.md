@@ -14,13 +14,10 @@
 
 28.01.2024, tehtävät aloitettu klo 13:10.  
 
-Kone Dell Latitude 7280
-
-Suoritin: Intel(R) Core(TM) i7-7600U CPU @ 2.80GHz   2.90 GHz
-
-Asennettu RAM: 16,0 Gt 
-
-Windowsin määritykset: Windows 10 Pro, versio 22H2
+- Kone: Dell Latitude 7280
+- Suoritin: Intel(R) Core(TM) i7-7600U CPU @ 2.80GHz   2.90 GHz
+- Asennettu RAM: 16,0 Gt 
+- Windowsin määritykset: Windows 10 Pro, versio 22H2
 
 ### Micro
 
@@ -28,8 +25,7 @@ Ensimmäisenä tehtävänä oli asentaa Micro-editori. Aloitin luomalla tiedosto
 
 ![vikatila](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/vika270123.JPG)
 
-Lähetin koneelle sammutussignaalin ja sen jälkeen käynnistin koneen uudelleen. Klo 13:20 kone käynnistyi uudelleen ja menin tekemääni tiedostot-kansioon. Tällä kertaa kirjoitin komennot käsin. Komento:
-``` curl https://getmic.ro | bash ```
+Lähetin koneelle sammutussignaalin ja sen jälkeen käynnistin koneen uudelleen. Klo 13:20 kone käynnistyi uudelleen ja menin tekemääni tiedostot-kansioon. Tällä kertaa kirjoitin komennot käsin. Komento: ``` curl https://getmic.ro | bash ```
 
 Tällä kertaa Micro asentui oikein.
 
@@ -51,18 +47,15 @@ Tehtävässä piti asentaa kolme komentoriviohjelmaa. Asensin ohjelmat
 - Oneko
 
 Näistä ensimmäisenä asensin Figletin (fonttiohjelma) klo 13:39. Asensin sen sivun [installati](https://installati.one/install-figlet-debian-11/) ohjeiden mukaan. Komennot järjestyksessä 
-``` sudo apt-get update ```;
-``` sudo apt-get -y install figlet```
+``` sudo apt-get update ```; ``` sudo apt-get -y install figlet```
 
 Figlet ei näkynyt kohdekansiossa komennolla "ls". Suullinen tiedonanto (Petri Sammakkosuo): Figlet asentui ns. systeemisovellukseksi ja on asentunut johonkin systeemikansioon. 
 
-13:47 Aloitin asentamaan Wikitiä. Ensin asensin NodeJS:n sivun [Tecmint](https://www.tecmint.com/wikipedia-commandline-tool/) Debian-ohjeiden mukaan:
-
-```` sudo apt-get install nodejs ````
+13:47 Aloitin asentamaan Wikitiä. Ensin asensin NodeJS:n sivun [Tecmint](https://www.tecmint.com/wikipedia-commandline-tool/) Debian-ohjeiden mukaan: ``` sudo apt-get install nodejs ```
 
 NodeJS asentui onnistuneesti.
 Seuraava komento ei kuitenkaan onnistunut:
-```` sudo npm install wikit -g ````
+``` sudo npm install wikit -g ```
 
 Vikailmoitus klo 13:48:
 ![komentoa ei löytynyt](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/npm.JPG)
@@ -75,9 +68,7 @@ Ohjelmien Cowsay, Fortune ja Oneko asentaminen sujui ongelmitta. Asensin kaikki 
 
 Fortune antoi jostain syystä lainauksia vain italiaksi. Halusin poistaa ohjelman ja tein sen käyttämällä sivun [cyberciti](https://www.cyberciti.biz/faq/delete-uninstall-software-linux-commands/) ohjeita. Ohjelma ei silti hävinnyt.
 
-Command line -ohjelmat ovat periaatteessa tekstinkäsittelyä ym. varten. Halusin kuitenkin asentaa jotain, mitä voisi konkreettisesti "käyttää" terminaalista. Asensin nSnake-pelin [it's Foss](https://itsfoss.com/best-command-line-games-linux/) ohjeiden mukaan.
-
-```` sudo apt install nsnake ````
+Command line -ohjelmat ovat periaatteessa tekstinkäsittelyä ym. varten. Halusin kuitenkin asentaa jotain, mitä voisi konkreettisesti "käyttää" terminaalista. Asensin nSnake-pelin [it's Foss](https://itsfoss.com/best-command-line-games-linux/) ohjeiden mukaan: ``` sudo apt install nsnake ```
 
 Klo 14:08 olin asentanut ohjelmat 
 
