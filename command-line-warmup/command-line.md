@@ -115,13 +115,13 @@ Grep-komentoa varten loin lyhyen tekstitiedoston. Hain sieltä grepillä neljäl
 
 Näistä grep -o palauttaa osumista vain haetun sanan, eli periaatteessa osumien määrän voisi laskea. En keksinyt, miksi haku olisi hyödyllinen. Muutoin pitkissä tekstitiedostoissa etenkin rivinumeron saaminen on erittäin hyvä ominaisuus (ne voi laittaa päälle myös itse tekstitiedostossa).
 
-![cat_hosts](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/grep1.JPG)
+![cat_hosts](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/grep1.JPG)
 
 ## Pipe
 
 Esimerkki putkista alla: grep | less. Less helpottaa pitkien tuloslistojen lukemista näyttämällä tulokset "sivu" kerrallaan. Less siis listaa tuloksia sen verran kuin näytölle mahtuu. Eteenpäin voi siirtyä välilyönnillä ja taaksepäin palata b-kirjaimella. Q-kirjain lopettaa selauksen.
 
-![cat_hosts](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/pipe.JPG)
+![cat_hosts](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/pipe.JPG)
 
 ## Tukki
 
