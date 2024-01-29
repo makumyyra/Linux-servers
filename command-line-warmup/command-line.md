@@ -58,6 +58,7 @@ Seuraava komento ei kuitenkaan onnistunut:
 ``` sudo npm install wikit -g ```
 
 Vikailmoitus klo 13:48:
+
 ![komentoa ei löytynyt](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/npm.JPG)
 
 En tiennyt, että minulta puuttui npm. Asensin sen suullisen ohjeen (Petri Sammakkosuo) mukaan (sudo apt-get install npm). Tämän jälkeen yllä oleva komento toimi ja Wikit asentui.
@@ -128,11 +129,15 @@ Esimerkki putkista alla: grep | less. Less helpottaa pitkien tuloslistojen lukem
 Lokia pääsi Debianissa lukemaan komennolla ``` journalctl ``` (StackExchange, 2024). Viimeisimmät lokimerkinnät saa näkyviin komennolla ``` journalctl -f ```
 
 Lokiin aiheutin virheen yllä luodun kani-käyttäjän avulla. Vaihdoin käyttäjäksi kani ja yritin käyttää sudo apt-get updatea. Sain virheen, joka raportoitiin adminille. Kani ei ole sudoers-tiedostossa.
+
 ![kani-sudo](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/kani_not_sudo.JPG)
+
 ![kani-sudo-fail](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/auth_fail.JPG)
 
 Onnistunut toiminto puolestaan oli suvi-käyttäjän lisääminen adm-ryhmään. Ohje löytyi Debian Wikistä System Group -osion alta (Debian Wiki, 2024). Adm-ryhmäläiset näkevät järjestelmäviestejä lokissa.
+
 ![suvi-to-adm](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/admgroup.JPG)
+
 ![suvi-adm-log](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/adduser_log.JPG)
 
 
