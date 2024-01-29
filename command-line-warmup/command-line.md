@@ -76,10 +76,10 @@ Klo 14:08 olin asentanut ohjelmat
 
 Ensin käytin komentoa pwd. Olin äsken luomassani kansiossa /home/suvi/tiedostot. Menin komennolla cd .. kansioita ylöspäin. Juurihakemistossa listasin sisältöä rekursiivisesti antamatta muita parametrejä. Listattavaa oli todella paljon. Keskeytin listaamisen komennolla "q"
 
-[ls -R | less](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/list_r.JPG)
+![ls -R | less](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/list_r.JPG)
 
 Juurikansion alakansiot/tiedostot listasin helposti komennolla ls.
-[ls -R | less](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/list_root.JPG)
+![ls -R | less](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/list_root.JPG)
 
 Seuraavaksi lisäsin käyttäjän "kani":
 
@@ -115,20 +115,20 @@ Grep-komentoa varten loin lyhyen tekstitiedoston. Hain sieltä grepillä neljäl
 
 Näistä grep -o palauttaa osumista vain haetun sanan, eli periaatteessa osumien määrän voisi laskea. En keksinyt, miksi haku olisi hyödyllinen. Muutoin pitkissä tekstitiedostoissa etenkin rivinumeron saaminen on erittäin hyvä ominaisuus (ne voi laittaa päälle myös itse tekstitiedostossa).
 
-![cat_hosts](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/grep.JPG)
+![cat_hosts](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/grep1.JPG)
 
 ## Pipe
 
 Esimerkki putkista alla: grep | less. Less helpottaa pitkien tuloslistojen lukemista näyttämällä tulokset "sivu" kerrallaan. Less siis listaa tuloksia sen verran kuin näytölle mahtuu. Eteenpäin voi siirtyä välilyönnillä ja taaksepäin palata b-kirjaimella. Q-kirjain lopettaa selauksen.
 
-![cat_hosts](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/pipe1.JPG)
+![cat_hosts](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/pipe.JPG)
 
 ## Tukki
 
 Lokia pääsi Debianissa lukemaan komennolla ``` journalctl ``` (StackExchange, 2024). Viimeisimmät lokimerkinnät saa näkyviin komennolla ``` journalctl -f ```
 
 Lokiin aiheutin virheen yllä luodun kani-käyttäjän avulla. Vaihdoin käyttäjäksi kani ja yritin käyttää sudo apt-get updatea. Sain virheen, joka raportoitiin adminille. Kani ei ole sudoers-tiedostossa.
-![kani-sudo](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/kani-not-sudo.JPG)
+![kani-sudo](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/kani_not_sudo.JPG)
 ![kani-sudo-fail](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/auth_fail.JPG)
 
 Onnistunut toiminto puolestaan oli suvi-käyttäjän lisääminen adm-ryhmään. Ohje löytyi Debian Wikistä System Group -osion alta (Debian Wiki, 2024). Adm-ryhmäläiset näkevät järjestelmäviestejä lokissa.
