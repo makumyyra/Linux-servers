@@ -1,7 +1,6 @@
 # Command Line Basics
 
-## Karvinen, Tero, 2020: Command Line Basics Revisited
-## Summary
+## Karvinen, Tero, 2020: Command Line Basics Revisited - Summary
 - The command line is a fast and effective way to operate
 - In the command line, you will be moving around in directories 
 - You can create and work with directories and files (e.g. create and manipulate files)
