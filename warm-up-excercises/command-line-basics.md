@@ -15,8 +15,11 @@
 28.01.2024, tehtävät aloitettu klo 13:10.  
 
 Kone Dell Latitude 7280
+
 Suoritin: Intel(R) Core(TM) i7-7600U CPU @ 2.80GHz   2.90 GHz
+
 Asennettu RAM: 16,0 Gt 
+
 Windowsin määritykset: Windows 10 Pro, versio 22H2
 
 ### Micro
