@@ -51,8 +51,8 @@ Tehtävässä piti asentaa kolme komentoriviohjelmaa. Asensin ohjelmat
 - Oneko
 
 Näistä ensimmäisenä asensin Figletin (fonttiohjelma) klo 13:39. Asensin sen sivun [installati](https://installati.one/install-figlet-debian-11/) ohjeiden mukaan. Komennot järjestyksessä 
-``` sudo apt-get update
-sudo apt-get -y install figlet```
+``` sudo apt-get update ```
+``` sudo apt-get -y install figlet```
 
 Figlet ei näkynyt kohdekansiossa komennolla ls. Suullinen tiedonanto (Petri Sammakkosuo): Figlet asentui ns. systeemisovellukseksi ja on asentunut johonkin systeemikansioon. 
 
