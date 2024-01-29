@@ -1,14 +1,15 @@
 # Command Line Basics
 
-## Command Line Basics Revisited - Summary
+## Karvinen, Tero, 2020: Command Line Basics Revisited
+## Summary
 - The command line is a fast and effective way to operate
 - In the command line, you will be moving around in directories 
 - You can create and work with directories and files (e.g. create and manipulate files)
 - You can connect to a remote machine in a remote command shell
 - The command line logs your operations so you can easily repeat them
 - Administrative commands require administrative rights (sudo = super user do)
+ 
 (Karvinen, T. 2020)
-
 
 ## Hands-on homework  
 
