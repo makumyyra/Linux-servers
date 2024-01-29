@@ -141,4 +141,8 @@ Onnistunut toiminto puolestaan oli suvi-käyttäjän lisääminen adm-ryhmään.
 Karvinen, Tero 2020. Command Line Basics Revisited. https://terokarvinen.com/2020/command-line-basics-revisited/?fromSearch=command%20line%20basics%20revisited Luettu 27.01.2024.
 Sammakkosuo, Petri. Suullinen tiedonanto 27.01.2024, 29.01.2024.
 [Debian Wiki](https://wiki.debian.org/SystemGroups). Luettu 29.01.2024.
+<<<<<<< HEAD
 [StackExchange](https://unix.stackexchange.com/questions/422213/how-to-see-the-latest-x-lines-from-systemctl-service-log). Luettu 29.01.2024.
+=======
+[StackExchange](https://unix.stackexchange.com/questions/422213/how-to-see-the-latest-x-lines-from-systemctl-service-log). Luettu 29.01.2024.
+>>>>>>> 34970b7a8ec0e862475d9195b946de2cdef5119e
