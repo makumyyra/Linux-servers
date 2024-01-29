@@ -9,6 +9,7 @@
 - Administrative commands require administrative rights (sudo = super user do)
 (Karvinen, T. 2020)
 
+
 ## Hands-on homework  
 
 28.01.2024, tehtävät aloitettu klo 13:10.  
