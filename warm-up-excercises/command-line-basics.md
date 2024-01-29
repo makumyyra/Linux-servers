@@ -39,7 +39,7 @@ Asensin ensin lshw-ohjelmiston. Linuxin listaamat tiedot alla kuvassa:
 
 ![vikatila](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/lshw.JPG)
 
-Järjestelmä on tietenkin VirtualBox, koska tietokone on luotu VirtualBoxin avulla. Muistiksi asetin virtuaalikonetta luodessani 4 GB, joka on kerrottu myös kuvassa. Prosessori on sama kuin oman fyysisen koneeni prosessori. Disk-kohdassa mainittu CD-ROM (jollaista asemaa läppäristäni ei löydy) on se, mihin virtuaalikoneessa "asetettiin" ISO-image. ISO-image toimii kuten järjestelmän asennus-CD, joten CD-ROM -asema on siksi tarpeellinen. Inputissa lukee mouse integration, joka lukee isäntäkoneen hiirenliikettä. 
+Järjestelmä on tietenkin VirtualBox, koska tietokone on luotu VirtualBoxin avulla. Muistiksi asetin virtuaalikonetta luodessani 4 GB, joka on kerrottu myös kuvassa. Prosessori on sama kuin oman fyysisen koneeni prosessori. Disk-kohdassa mainittu CD-ROM (jollaista asemaa läppäristäni ei löydy) on se, mihin virtuaalikoneessa "asetettiin" ISO-image. ISO-image toimii kuten järjestelmän asennus-CD, joten CD-ROM -asema on siksi tarpeellinen. Inputissa lukee mouse integration, joka lukee isäntäkoneen hiirenliikettä. Muita osioita en vielä osaa analysoida. 
 
 ### Apt (Debianin "Advanced Package Tool")
 
