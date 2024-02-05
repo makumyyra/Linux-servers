@@ -52,7 +52,7 @@ Curl-komento (Client URL) mahdollistaa tiedonsiirron koneen ja sivuston välill�
 Curl -l:stä en ottanut kuvakaappausta, mutta mikäli haettu sivu on "muuttanut", "curl -l" ohjautuu uuteen kohteeseen tekemään curl-komennon. 
 
 Tiedostojen pääsyoikeuksia jouduin muokkaamaan komennolla "chmod ugo+x $HOME $HOME/public_html/', 'ls -ld $HOME $HOME/publicsites/hattu.example.com'.
-![paasyoikeudet](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/oikeudet.JPG)
+![paasyoikeudet](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/oikeudet.jpg)
 Sitten annoin vielä rekursiivisesti oikeudet käyttäjälle suvi ("-R"). Käyttäjä sai siis oikeudet komennossa mainittuun kansioon ja kaikkiin sen alakansioihin & tiedostoihin.
 
 
