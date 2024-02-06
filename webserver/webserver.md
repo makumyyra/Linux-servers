@@ -27,6 +27,8 @@ https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-
 
 Koneelle asennettiin 30.1.2024 tunnilla Apache2 ja testattiin, että localhost vastaa. Lähdin siis liikkeelle kohdasta h3 b. 
 
+### Access log, error log
+
 Ensin tarkastelin access logia (sudo tail -f /var/log/apache2/access.log). 'tail'-komento pitää loggausta käynnissä virtuaalikoneen ruudulla ja rekisteröi tapahtumia ylläpidetyillä sivuilla.
 
 ![access_log](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/accesslog.JPG)
@@ -37,13 +39,19 @@ Error logissa (alla) näkyi koneen sammutusta, konfigurointia ja käynnistystä,
 
 ![error_log](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/errorlog.JPG)
 
+### Hosts
+
 Kävin tekemässä useammankin eri nettisivun. Kotitehtävän "hattu.example.com" löytyy hostseissa tällä hetkellä kahdessa eri muodossa. Sieltä löytyvät myös muut tekemäni sivut. Kaikki ohjautuvat samaan osoitteeseen (localhost; 127.0.0.1). Hosteja pääsi muokkaamaan komennolla "sudoedit /etc/hosts".
 
 ![hosts](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/hosts.JPG)
 
+### HTML-sisältö
+
 hattu.example.com -sivun HTML-koodissa sivun nimi löytyy head>titlesta sekä bodyn ylätunnisteesta (alla). HTML-koodi on tehty sivun html5example.comin mukaan.
 
 ![hattu_pagesource](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/hattu_pagesource.JPG)
+
+### Curl, curl -l
 
 Curl-komento (Client URL) mahdollistaa tiedonsiirron koneen ja sivuston välillä. Käytännössä curl pyytää tietoa nettisivulta, saa joitakin sivun perustietoja, ja tulostaa ne käyttäjälle.
 
@@ -51,15 +59,19 @@ Curl-komento (Client URL) mahdollistaa tiedonsiirron koneen ja sivuston välill�
 
 Curl -l:stä en ottanut kuvakaappausta, mutta mikäli haettu sivu on "muuttanut", "curl -l" ohjautuu uuteen kohteeseen tekemään curl-komennon. 
 
-Tiedostojen pääsyoikeuksia jouduin muokkaamaan komennolla "chmod ugo+x $HOME $HOME/public_html/', 'ls -ld $HOME $HOME/publicsites/hattu.example.com'.
-![paasyoikeudet](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/oikeudet.JPG)
-Sitten annoin vielä rekursiivisesti oikeudet käyttäjälle suvi ("-R"). Käyttäjä sai siis oikeudet komennossa mainittuun kansioon ja kaikkiin sen alakansioihin & tiedostoihin.
+### Pääsyoikeudet
 
+Tiedostojen pääsyoikeuksia jouduin muokkaamaan komennolla "chmod ugo+x $HOME $HOME/public_html/', 'ls -ld $HOME $HOME/publicsites/hattu.example.com'.
+![paasyoikeudet](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/oikeudet.jpg)
+Sitten annoin vielä rekursiivisesti oikeudet käyttäjälle suvi ("-R"). Käyttäjä sai siis oikeudet komennossa mainittuun kansioon ja kaikkiin sen alakansioihin & tiedostoihin:
+
+![paasyoikeudet](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/suvi_suvi.jpg)
 
 Lisätehtävä: Kuten hosts-kuvasta (yllä) näkyy, kone vastaa tällä hetkellä useammastakin nimestä.
 
 
 
+Sivu päivitetty 6.2.2024
 
 ## Lähteet:
 
@@ -69,6 +81,7 @@ Karvinen Tero 2018. Name Based Virtual Hosts on Apache – Multiple Websites to 
 https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/ Luettu 1.2.2024.
 
 Sammakkosuo Petri. Suullinen tiedonanto. 4.2. ja 5.2.2024.
+
 
 
 
