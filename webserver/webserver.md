@@ -27,7 +27,15 @@ https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-
 
 Koneelle asennettiin 30.1.2024 tunnilla Apache2 ja testattiin, että localhost vastaa. Lähdin siis liikkeelle kohdasta h3 b. 
 
-Ensin tarkastelin access logia (sudo tail -f /var/log/apache2/access.log). 'tail'-komento pitää loggausta käynnissä virtuaalikoneen ruudulla ja rekisteröi tapahtumia ylläpidetyillä sivuilla.
+Käytetyn koneen speksit:
+- Kone: Dell Latitude 7280
+- Suoritin: Intel(R) Core(TM) i7-7600U CPU @ 2.80GHz   2.90 GHz
+- Asennettu RAM: 16,0 Gt 
+- Windowsin määritykset: Windows 10 Pro, versio 22H2
+
+Alla olevien harjoitusten teko aloitettu 4.2. klo 20:07
+
+Harjoitusta tehty useampana päivänä, joten sivuja oli jo valmiina. Pääsin siis suoraan tarkastelemaan myös access logia (sudo tail -f /var/log/apache2/access.log). 'tail'-komento pitää loggausta käynnissä virtuaalikoneen ruudulla ja rekisteröi tapahtumia ylläpidetyillä sivuilla.
 
 ![access_log](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/accesslog.JPG)
 
@@ -59,7 +67,7 @@ Sitten annoin vielä rekursiivisesti oikeudet käyttäjälle suvi ("-R"). Käytt
 
 Lisätehtävä: Kuten hosts-kuvasta (yllä) näkyy, kone vastaa tällä hetkellä useammastakin nimestä.
 
-
+Tehtävät valmiina klo 21:52.
 
 
 ## Lähteet:
