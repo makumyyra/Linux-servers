@@ -27,9 +27,21 @@ https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-
 
 Koneelle asennettiin 30.1.2024 tunnilla Apache2 ja testattiin, että localhost vastaa. Lähdin siis liikkeelle kohdasta h3 b. 
 
+<<<<<<< HEAD
 ### Access log, error log
 
 Ensin tarkastelin access logia (sudo tail -f /var/log/apache2/access.log). 'tail'-komento pitää loggausta käynnissä virtuaalikoneen ruudulla ja rekisteröi tapahtumia ylläpidetyillä sivuilla.
+=======
+Käytetyn koneen speksit:
+- Kone: Dell Latitude 7280
+- Suoritin: Intel(R) Core(TM) i7-7600U CPU @ 2.80GHz   2.90 GHz
+- Asennettu RAM: 16,0 Gt 
+- Windowsin määritykset: Windows 10 Pro, versio 22H2
+
+Alla olevien harjoitusten teko aloitettu 4.2. klo 20:07
+
+Harjoitusta tehty useampana päivänä, joten sivuja oli jo valmiina. Pääsin siis suoraan tarkastelemaan myös access logia (sudo tail -f /var/log/apache2/access.log). 'tail'-komento pitää loggausta käynnissä virtuaalikoneen ruudulla ja rekisteröi tapahtumia ylläpidetyillä sivuilla.
+>>>>>>> 7740c77d8b4332e9152d3ede924a75eda788d8e9
 
 ![access_log](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/accesslog.JPG)
 
@@ -59,17 +71,24 @@ Curl-komento (Client URL) mahdollistaa tiedonsiirron koneen ja sivuston välill�
 
 Curl -l:stä en ottanut kuvakaappausta, mutta mikäli haettu sivu on "muuttanut", "curl -l" ohjautuu uuteen kohteeseen tekemään curl-komennon. 
 
+<<<<<<< HEAD
 ### Pääsyoikeudet
 
 Tiedostojen pääsyoikeuksia jouduin muokkaamaan komennolla "chmod ugo+x $HOME $HOME/public_html/', 'ls -ld $HOME $HOME/publicsites/hattu.example.com'.
 ![paasyoikeudet](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/oikeudet.jpg)
 Sitten annoin vielä rekursiivisesti oikeudet käyttäjälle suvi ("-R"). Käyttäjä sai siis oikeudet komennossa mainittuun kansioon ja kaikkiin sen alakansioihin & tiedostoihin:
 
+=======
+Tiedostojen pääsyoikeuksia jouduin muokkaamaan komennolla "chmod ugo+x $HOME $HOME/public_html/', 'ls -ld $HOME $HOME/publicsites/hattu.example.com'.
+![paasyoikeudet](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/oikeudet.jpg)
+Sitten annoin vielä rekursiivisesti oikeudet käyttäjälle suvi ("-R"). Käyttäjä sai siis oikeudet komennossa mainittuun kansioon ja kaikkiin sen alakansioihin & tiedostoihin:
+
+>>>>>>> 7740c77d8b4332e9152d3ede924a75eda788d8e9
 ![paasyoikeudet](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/suvi_suvi.jpg)
 
 Lisätehtävä: Kuten hosts-kuvasta (yllä) näkyy, kone vastaa tällä hetkellä useammastakin nimestä.
 
-
+Tehtävät valmiina klo 21:52.
 
 Sivu päivitetty 6.2.2024
 
