@@ -65,8 +65,6 @@ Curl-komento (Client URL) mahdollistaa tiedonsiirron koneen ja sivuston v채lill�
 
 ![curl](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/curl.JPG)
 
-Curl -l:st채 en ottanut kuvakaappausta, mutta mik채li haettu sivu on "muuttanut", "curl -l" ohjautuu uuteen kohteeseen tekem채채n curl-komennon. 
-
 ### P채채syoikeudet
 
 Tiedostojen p채채syoikeuksia jouduin muokkaamaan komennolla "chmod ugo+x $HOME $HOME/public_html/', 'ls -ld $HOME $HOME/publicsites/hattu.example.com'.
