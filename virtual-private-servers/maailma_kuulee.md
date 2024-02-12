@@ -1,5 +1,11 @@
 # Maailma kuulee
 
+Käytetyn koneen speksit:
+Kone: Dell Latitude 7280
+Suoritin: Intel(R) Core(TM) i7-7600U CPU @ 2.80GHz 2.90 GHz
+Asennettu RAM: 16,0 Gt
+Windowsin määritykset: Windows 10 Pro, versio 22H2
+
 # 1. Tekstitiivistelmät
 
 ## 1.1 Teoriasta käytäntöön pilvipalvelimen avulla (Lehto 2022)
@@ -54,7 +60,7 @@ Murtautumisyrityksiä voi tarkastella esimerkiksi komennolla ```sudo less /var/l
 
 # 2. Virtuaalipalvelimen vuokraus käytännössä
 
-Tunnilla harjoiteltiin yllä mainitun [DigitalOceanin](https://cloud.digitalocean.com/) käyttöä. Olin ns. koekaniini ja tein vuokrauksen jakamalla samalla omaa ruutua. Tästä haipakasta johtuen en tajunnut ottaa kuvakaappauksia. Törmäsin kuitenkin (samasta syystä) toiseen ongelmaan, jota käsittelen alla. Kyseessä siis
+Tunnilla harjoiteltiin yllä mainitun [DigitalOceanin](https://cloud.digitalocean.com/) käyttöä. Olin ns. koekaniini ja tein vuokrauksen jakamalla samalla omaa ruutua. Tästä haipakasta johtuen en tajunnut ottaa kuvakaappauksia. Törmäsin kuitenkin (samasta syystä) toiseen ongelmaan, jota käsittelen alla. Kyseessä siis:
 
 ## Unohtunut salasana
 
@@ -82,6 +88,8 @@ Sitten kirjauduin root-käyttäjänä palvelimelta ulos. Tämän jälkeen rootil
 ![root login denied](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/root_deny.jpg)
 
 Sen jälkeen tein normaalit päivitykset ja lähdin miettimään mahdollista DNS-nimeä.
+Muutin sivuston etusivun erittäin yksinkertaiseksi.
+![front](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/etusivu.JPG)
 
 
 
