@@ -1,7 +1,8 @@
 # Maailma kuulee
 
-## Tekstitiivistelmät
-## 1. Teoriasta käytäntöön pilvipalvelimen avulla (Lehto 2022)
+# 1. Tekstitiivistelmät
+
+## 1.1 Teoriasta käytäntöön pilvipalvelimen avulla (Lehto 2022)
 
 ### a) Pilvipalvelimen vuokraus ja asennus
 - Palvelimia (droplet) voi vuokrata useasta eri yrityksestä, esimerkiksi DigitalOcean (vaatii rekisteröitymisen ja luottokortin)
@@ -40,7 +41,7 @@ sudo apt-get dist-upgrade
 Murtautumisyrityksiä voi tarkastella esimerkiksi komennolla ```sudo less /var/log/auth.log | grep 10540``` 
 
 
-## 2. First Steps on a New Virtual Private Server (Karvinen 2012)
+## 1.2 First Steps on a New Virtual Private Server (Karvinen 2012)
 
 - Virtuaalipalvelimen oston jälkeen omalta koneelta kirjaudutaan virtuaalikoneelle roolissa "root" ja annetaan hyvä salasana. Tämän jälkeen:
 	- pystytä palomuuri
@@ -51,7 +52,7 @@ Murtautumisyrityksiä voi tarkastella esimerkiksi komennolla ```sudo less /var/l
 - Virtuaalipalvelimen oston jälkeen voisi olla mukavaa esimerkiksi hankkia sille nimi. Tämän voi tehdä esim. NameCheapista.
 
 
-## Virtuaalipalvelimen vuokraus käytännössä
+# 2. Virtuaalipalvelimen vuokraus käytännössä
 
 Tunnilla harjoiteltiin yllä mainitun [DigitalOceanin](https://cloud.digitalocean.com/) käyttöä. Olin ns. koekaniini ja tein vuokrauksen jakamalla samalla omaa ruutua. Tästä haipakasta johtuen en tajunnut ottaa kuvakaappauksia. Törmäsin kuitenkin (samasta syystä) toiseen ongelmaan, jota käsittelen alla. Kyseessä siis
 
@@ -67,6 +68,7 @@ Tämän jälkeen mentiin kohtaan Log in as root.
 ![droplet_recovery](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/droplet_recovery.jpg)
 
 Tämän jälkeen menin konsolissa ensiksi vaihtamaan rootin salasanan. Sen jälkeen vaihdoin rootin ominaisuudessa salasanan aiemmin luomalleni käyttäjälle suvi.
+
 ![change_pswd](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/change_psw.jpg)
 
 Sen jälkeen avasin konsolin. Huom: vastaavan virtuaalipalvelimen kohdalla myös powershell toimii suoraan (alla). Menin varmistamaan, että käyttäjällä suvi pääsee nyt sisään.
