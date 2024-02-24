@@ -27,10 +27,10 @@ Tehtävä lopetettu 23.2.24 klo 18:05
 Tehtävä aloitettu 23.2.24 klo 23:08
 
 Guest additions:
-Yläriviltä Devices -> Insert Guest Additions CD Image
-Komento: ```mount /dev/cdrom /mnt ```
-Komento (mene kys. kansioon): ```cd /mnt```
-Komento (aja CD): ```./VBoxLinuxAdditions.run```
+- Yläriviltä Devices -> Insert Guest Additions CD Image
+- Komento: ```mount /dev/cdrom /mnt ```
+- Komento (mene kys. kansioon): ```cd /mnt```
+- Komento (aja CD): ```./VBoxLinuxAdditions.run```
 Sen jälkeen käynnistä kone uudelleen ("reboot"), jolloin GA-CD poistuu levyasemasta.
 
 ![guest additions](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/pingviini5/guestadd.JPG)
@@ -38,28 +38,29 @@ Sen jälkeen käynnistä kone uudelleen ("reboot"), jolloin GA-CD poistuu levyas
 Ohjelmia asentaessa törmään ongelmaan. Linux yrittää hakea medioita asennuslevyltä (jota ei ole). 
 
 Komento: ```sudo apt-get update ``` ->
-"Ign: 1 cdrom [- -] bookworm InRelease: Please use apt-cdrom to make this CD-ROM recognized by APT." jne.
+
+*Ign: 1 cdrom [- -] bookworm InRelease: Please use apt-cdrom to make this CD-ROM recognized by APT."* jne.
 
 ![apt error](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/pingviini5/error.JPG)
 
-Komento: sudo nano -w /etc/apt/sources.list
+Komento: ```sudo nano -w /etc/apt/sources.list```
 Sources.listiin pitää lisätä seuraavat tiedot:
 
-```deb http://deb.debian.org/debian bookworm main
-deb-src http://deb.debian.org/debian bookworm main
+```deb http://deb.debian.org/debian bookworm main```
+```deb-src http://deb.debian.org/debian bookworm main```
 
-deb http://deb.debian.org/debian-security/ bookworm-security main
-deb-src http://deb.debian.org/debian-security/ bookworm-security main
+```deb http://deb.debian.org/debian-security/ bookworm-security main```
+```deb-src http://deb.debian.org/debian-security/ bookworm-security main```
 
-deb http://deb.debian.org/debian bookworm-updates main
-deb-src http://deb.debian.org/debian bookworm-updates main ```
+```deb http://deb.debian.org/debian bookworm-updates main```
+```deb-src http://deb.debian.org/debian bookworm-updates main ```
 
 Lisäksi pitää laittaa sources.listissä ollut tieto kommentiksi, jotta se ei enää ole käytössä.
 
 Näiden jälkeen ajan komennot 
-```sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get dist-upgrade```
+```sudo apt-get update```
+```sudo apt-get upgrade```
+```sudo apt-get dist-upgrade```
 
 Tehtävä lopetettu 23.2.24 klo 23:51
 
