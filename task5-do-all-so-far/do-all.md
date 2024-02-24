@@ -46,21 +46,21 @@ Komento: ```sudo apt-get update ``` ->
 Komento: ```sudo nano -w /etc/apt/sources.list```
 Sources.listiin pitää lisätä seuraavat tiedot:
 
-```deb http://deb.debian.org/debian bookworm main```
-```deb-src http://deb.debian.org/debian bookworm main```
+- ```deb http://deb.debian.org/debian bookworm main```
+- ```deb-src http://deb.debian.org/debian bookworm main```
 
-```deb http://deb.debian.org/debian-security/ bookworm-security main```
-```deb-src http://deb.debian.org/debian-security/ bookworm-security main```
+- ```deb http://deb.debian.org/debian-security/ bookworm-security main```
+- ```deb-src http://deb.debian.org/debian-security/ bookworm-security main```
 
-```deb http://deb.debian.org/debian bookworm-updates main```
-```deb-src http://deb.debian.org/debian bookworm-updates main ```
+- ```deb http://deb.debian.org/debian bookworm-updates main```
+- ```deb-src http://deb.debian.org/debian bookworm-updates main ```
 
 Lisäksi pitää laittaa sources.listissä ollut tieto kommentiksi, jotta se ei enää ole käytössä.
 
 Näiden jälkeen ajan komennot 
-```sudo apt-get update```
-```sudo apt-get upgrade```
-```sudo apt-get dist-upgrade```
+- ```sudo apt-get update```
+- ```sudo apt-get upgrade```
+- ```sudo apt-get dist-upgrade```
 
 Tehtävä lopetettu 23.2.24 klo 23:51
 
