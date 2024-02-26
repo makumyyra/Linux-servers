@@ -98,15 +98,15 @@ Tämän jälkeen toimin sivun [Name based virtual hosts](https://terokarvinen.co
 
 > Sisällöksi:  
 <VirtualHost *:80>  
- ServerName pyora.example.com  
- ServerAlias www.pyora.example.com  
+ ServerName sivunnimi.com  
+ ServerAlias www.sivunnimi.com  
  DocumentRoot /home/käyttäjä/publicsites/sivunnimi.com  
  <Directory /home/käyttäjä/publicsites/sivunnimi.com>  
    Require all granted  
  </Directory>  
 </VirtualHost>  
 
-- ```sudo a2ensite pyora.example.com```
+- ```sudo a2ensite sivunnimi.com```
 - ```sudo systemctl restart apache2```
 - ```mkdir -p /home/käyttäjä/publicsites/sivunnimi.com/```
 - ```echo teksti > /home/käyttäjä/publicsites/sivunnimi.com/index.html```
@@ -158,11 +158,12 @@ Lopetin tehtävän tekemisen 24.2.24 klo 13:28.
 25.2.24 klo 14:01
 Jatkoin samalla virtuaalikoneella.
 Otin ensiksi ssh-yhteyden DigitalOceanin koneeseeni:
-```ssh suvi@omavirtuaalikone.com```
+```ssh suvi@suvisammakko.com```
 
 Siellä muutin käyttäjän rootiksi komennolla sudo su --> salasana, jonka jälkeen ei tarvitse kirjoittaa sudoa joka kerta. Tämän huomaa myös ruutumerkistä "sijainti"tilassa:
 
 ![no 'sudo'](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/pingviini5/nosudo.JPG)
+
 **huom: root on käytössä normaalisti, mutta sillä ei voi sisäänkirjautua, eli aiemmin tehty 'sudo usermod --lock root'**
 
 Oman nettisivun (suvisammakko.com) lokien lukeminen:
@@ -172,10 +173,11 @@ Huom. esim "failed password for root", eli joku oli yrittänyt murtautua sisää
 ![ssh logs](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/pingviini5/journalctl.JPG)
 
 Dig- ja host-komentoja varten piti ensin asentaa bind9-dnsutils ja bind9-host:
+
 ```sudo apt-get install bind9-dnsutils bind9-host```
 
 Dig-komennon tulokset:
-![dig]https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/pingviini5/dig.JPG)
+![dig](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/pingviini5/dig.JPG)
 
 Host-komento (sivuston IP-osoite ja vaihtoehtoisia saapuvan postin palvelimia. Jos yksi on kiireinen, tehtävä siirtyy toiselle.)
 ![host](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/pingviini5/host.JPG)
