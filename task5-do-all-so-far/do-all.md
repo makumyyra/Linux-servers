@@ -95,27 +95,45 @@ Tämän jälkeen toimin sivun [Name based virtual hosts](https://terokarvinen.co
 #### Komennot lyhenneltynä versiona: 
 
 ```sudoedit /etc/apache2/sites-available/sivunnimi.com.conf```
+
 Sisällöksi:
+
 <VirtualHost *:80>
+
  ServerName pyora.example.com
+
  ServerAlias www.pyora.example.com
+
  DocumentRoot /home/käyttäjä/publicsites/sivunnimi.com
+
  <Directory /home/käyttäjä/publicsites/sivunnimi.com>
+
    Require all granted
+
  </Directory>
+
 </VirtualHost>
+
 ```sudo a2ensite pyora.example.com```
+
 ```sudo systemctl restart apache2```
+
 ```mkdir -p /home/käyttäjä/publicsites/sivunnimi.com/```
+
 ```echo teksti > /home/käyttäjä/publicsites/sivunnimi.com/index.html```
 
 ```curl -H 'Host: sivunnimi.com' localhost```
+
 ```curl localhost```
 
 ```sudoedit /etc/hosts```
+
 127.0.0.1 localhost
+
 127.0.1.1 käyttäjä
+
 127.0.0.1 sivunnimi.com
+
 (Karvinen, 2018.)
 
 Kotisivua ei päässyt lukemaan, joten lisäsin kansioon oikeuksia komennolla ```chmod ugo+x $HOME $HOME/publicsites/```. 
