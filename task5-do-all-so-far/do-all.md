@@ -94,44 +94,28 @@ Tämän jälkeen toimin sivun [Name based virtual hosts](https://terokarvinen.co
 
 #### Komennot lyhenneltynä versiona: 
 
-```sudoedit /etc/apache2/sites-available/sivunnimi.com.conf```
+- ```sudoedit /etc/apache2/sites-available/sivunnimi.com.conf```
 
-Sisällöksi:
+> Sisällöksi:  
+<VirtualHost *:80>  
+ ServerName pyora.example.com  
+ ServerAlias www.pyora.example.com  
+ DocumentRoot /home/käyttäjä/publicsites/sivunnimi.com  
+ <Directory /home/käyttäjä/publicsites/sivunnimi.com>  
+   Require all granted  
+ </Directory>  
+</VirtualHost>  
 
-<VirtualHost *:80>
+- ```sudo a2ensite pyora.example.com```
+- ```sudo systemctl restart apache2```
+- ```mkdir -p /home/käyttäjä/publicsites/sivunnimi.com/```
+- ```echo teksti > /home/käyttäjä/publicsites/sivunnimi.com/index.html```
+- ```curl -H 'Host: sivunnimi.com' localhost```
+- ```curl localhost```
+- ```sudoedit /etc/hosts```
 
- ServerName pyora.example.com
-
- ServerAlias www.pyora.example.com
-
- DocumentRoot /home/käyttäjä/publicsites/sivunnimi.com
-
- <Directory /home/käyttäjä/publicsites/sivunnimi.com>
-
-   Require all granted
-
- </Directory>
-
-</VirtualHost>
-
-```sudo a2ensite pyora.example.com```
-
-```sudo systemctl restart apache2```
-
-```mkdir -p /home/käyttäjä/publicsites/sivunnimi.com/```
-
-```echo teksti > /home/käyttäjä/publicsites/sivunnimi.com/index.html```
-
-```curl -H 'Host: sivunnimi.com' localhost```
-
-```curl localhost```
-
-```sudoedit /etc/hosts```
-
-127.0.0.1 localhost
-
-127.0.1.1 käyttäjä
-
+> 127.0.0.1 localhost  
+127.0.1.1 käyttäjä  
 127.0.0.1 sivunnimi.com
 
 (Karvinen, 2018.)
@@ -177,6 +161,7 @@ Otin ensiksi ssh-yhteyden DigitalOceanin koneeseeni:
 ```ssh suvi@omavirtuaalikone.com```
 
 Siellä muutin käyttäjän rootiksi komennolla sudo su --> salasana, jonka jälkeen ei tarvitse kirjoittaa sudoa joka kerta. Tämän huomaa myös ruutumerkistä "sijainti"tilassa:
+
 ![no 'sudo'](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/pingviini5/nosudo.JPG)
 **huom: root on käytössä normaalisti, mutta sillä ei voi sisäänkirjautua, eli aiemmin tehty 'sudo usermod --lock root'**
 
@@ -203,9 +188,9 @@ Tämän jälkeen voi kirjautua ssh-yhteydellä passphrasella. Oma julkinen ssh-a
 ### CertBot
 
 Lisäksi asensin DigitalOceanin nettisivulle certbot-sertifikaatin.
-```apt-get install certbot```
-```apt-get install python3-certbot-apache```
-```certbot --apache --agree-tos --redirect --hsts --staple-ocsp --email esim@esimerkki.com -d omadomain.com ```
+- ```apt-get install certbot```
+- ```apt-get install python3-certbot-apache```
+- ```certbot --apache --agree-tos --redirect --hsts --staple-ocsp --email esim@esimerkki.com -d omadomain.com ```
 
 ![certificate registered](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/pingviini5/certreg.JPG)
 
