@@ -1,17 +1,16 @@
 # Kaikki tähän mennessä
 
-Käytetyn koneen speksit:
+## Fyysisen koneen speksit:
 
 - Kone: Dell Latitude 7280
 - Suoritin: Intel(R) Core(TM) i7-7600U CPU @ 2.80GHz 2.90 GHz
 - Asennettu RAM: 16,0 Gt
 - Windowsin määritykset: Windows 10 Pro, versio 22H2
 
+## Virtuaalikone:
 
 Tehtävä aloitettu 23.2.24 klo 17:32
 Vahingossa ensin Debian-32 bit, jonka jälkeen suoraan uusi kone.
-
-### 2. kone:
 
 Valitut speksit lyhyesti, koska itse virtuaalikoneen luominen on käyty läpi jo aiemmilla tunneilla: 
 
@@ -29,6 +28,8 @@ Tehtävä lopetettu 23.2.24 klo 18:05
 Tehtävä aloitettu 23.2.24 klo 23:08
 
 Seuraavaksi asensin koneelle guest additionsit, jotta ruutua saa skaalattua ja kirjoituksessa voi käyttää tabulaattoria täydentämiseen.
+
+### Guest Additions
 
 Guest additions:
 - Yläriviltä Devices -> Insert Guest Additions CD Image
@@ -75,6 +76,8 @@ Tehtävä lopetettu 23.2.24 klo 23:51
 
 24.2.24 klo 12:02
 
+### Name based virtual host
+
 En jatkanut eilen luodulla virtuaalikoneella eteenpäin vaan poistin sen. Loin uuden samoilla spekseillä, tällä kertaa kuitenkin käyttäen network mirroria (Finland, deb.debian.org).
 
 Sen jälkeen tein päivitykset:
@@ -86,7 +89,9 @@ Sen jälkeen asensin apachen:
 ```sudo apt-get install apache2```
 
 
-Tämän jälkeen toimin sivun [Name based virtual hosts](https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/) ohjeiden mukaan. Komennot lyhenneltynä versiona: 
+Tämän jälkeen toimin sivun [Name based virtual hosts](https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/) ohjeiden mukaan. 
+
+#### Komennot lyhenneltynä versiona: 
 
 ```sudoedit /etc/apache2/sites-available/sivunnimi.com.conf```
 Sisällöksi:
@@ -112,6 +117,11 @@ Sisällöksi:
 127.0.0.1 sivunnimi.com
 (Karvinen, 2018.)
 
+Kotisivua ei päässyt lukemaan, joten lisäsin kansioon oikeuksia komennolla ```chmod ugo+x $HOME $HOME/publicsites/```. 
+
+Tämän jälkeen sivu näkyi oikein.
+
+### Mokia
 
 Aluksi yritin vahingossa muokata /var/www/html/index.html:ää, mutta minulla ei ollut tarvittavia oikeuksia.
 
@@ -137,15 +147,13 @@ Kokeilin paikantaa virhettä komennolla ```sudo apache2ctl configtest```. Tämä
 
 ![Apache reload error](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/pingviini5/apachereload1.JPG)
 
-Kun yllä oleva asia oli korjattu, menin katsomaan sivua selaimesta. **Huomautus itselle: tässä tulee tietenkin käyttää virtuaalikoneen selainta eikä oman koneen selainta!**
-
-Kotisivua ei päässyt lukemaan, joten lisäsin kansioon oikeuksia komennolla ```chmod ugo+x $HOME $HOME/publicsites/```. 
-
-Tämän jälkeen sivu näkyi oikein.
+Kun yllä oleva asia oli korjattu, menin katsomaan sivua selaimesta. **Huomautus itselle: tässä tulee tietysti käyttää virtuaalikoneen selainta eikä oman koneen selainta**
 
 Lopetin tehtävän tekemisen 24.2.24 klo 13:28.
 
 25.2.24 klo 14:01
+
+### SSH
 
 Jatkoin samalla virtuaalikoneella.
 Otin ensiksi ssh-yhteyden DigitalOceanin koneeseeni:
@@ -170,11 +178,12 @@ Dig-komennon tulokset:
 Host-komento (sivuston IP-osoite ja vaihtoehtoisia saapuvan postin palvelimia. Jos yksi on kiireinen, tehtävä siirtyy toiselle.)
 ![host](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/pingviini5/host.JPG)
 
-
 Loin ssh-avaimen komennolla ```ssh-keygen```. Sen jälkeen liitin sen DigitalOcean-sivulleni komennolla ```ssh-copy-id suvi@suvisammakko.com```.
 ![copy id](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/pingviini5/copyidssh.JPG)
 
 Tämän jälkeen voi kirjautua ssh-yhteydellä passphrasella. Oma julkinen ssh-avain tallentuu esim. DigitalOceanin koneelle .ssh-tiedostoon (.-alku = salattu tiedosto).
+
+### CertBot
 
 Lisäksi asensin DigitalOceanin nettisivulle certbot-sertifikaatin.
 ```apt-get install certbot```
@@ -183,13 +192,14 @@ Lisäksi asensin DigitalOceanin nettisivulle certbot-sertifikaatin.
 
 ![certificate registered](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/pingviini5/certreg.JPG)
 
+### Misc
 
 Harjoittelin myös ryhmäoikeuksien antamista kansioon. Aiemmin käyttäjä 'mikko' on lisätty puput-ryhmään (```sudo adduser mikko puput```). Tässä puput-ryhmä saa käyttöoikeuden kansioon (mikko.example.com), jossa sijaitsee peruskäyttäjien muokattava nettisivu (index.html).
 
 ![chown](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/pingviini5/chmod_chown.JPG)
 
 
-
+### Lähteet
 
 Karvinen Tero 2018. Name Based Virtual Hosts. Luettavissa: https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/ Luettu 24., 25.2.24.
 
