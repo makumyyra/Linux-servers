@@ -25,7 +25,8 @@ Valitut speksit lyhyesti, koska itse virtuaalikoneen luominen on käyty läpi jo
 - grub (käytä olemassaolevaa; dev/sda)
 
 Tehtävä lopetettu 23.2.24 klo 18:05
-Tehtävä aloitettu 23.2.24 klo 23:08
+
+Tehtävää jatkettu 23.2.24 klo 23:08
 
 Seuraavaksi asensin koneelle guest additionsit, jotta ruutua saa skaalattua ja kirjoituksessa voi käyttää tabulaattoria täydentämiseen.
 
@@ -74,9 +75,9 @@ Näiden jälkeen ajan onnistuneesti komennot
 
 Tehtävä lopetettu 23.2.24 klo 23:51
 
-24.2.24 klo 12:02
+### Name based virtual host 
 
-### Name based virtual host
+24.2.24 klo 12:02
 
 En jatkanut eilen luodulla virtuaalikoneella eteenpäin vaan poistin sen. Loin uuden samoilla spekseillä, tällä kertaa kuitenkin käyttäen network mirroria (Finland, deb.debian.org).
 
@@ -151,10 +152,8 @@ Kun yllä oleva asia oli korjattu, menin katsomaan sivua selaimesta. **Huomautus
 
 Lopetin tehtävän tekemisen 24.2.24 klo 13:28.
 
-25.2.24 klo 14:01
-
 ### SSH
-
+25.2.24 klo 14:01
 Jatkoin samalla virtuaalikoneella.
 Otin ensiksi ssh-yhteyden DigitalOceanin koneeseeni:
 ```ssh suvi@omavirtuaalikone.com```
