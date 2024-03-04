@@ -1,3 +1,6 @@
+***Huom: Laksu-palautuksessa ilmoitettu versio ei ole enää kesken. Valmis 4.3.2024 klo 17:42.***
+
+
 # Django 3 setup
 
 > Käytetyn koneen speksit:  
@@ -6,19 +9,18 @@ Suoritin: Intel(R) Core(TM) i7-7600U CPU @ 2.80GHz 2.90 GHz
 Asennettu RAM: 16,0 Gt  
 Windowsin määritykset: Windows 10 Pro, versio 22H2  
 
-## Tekstitiivistelmät
+Tehtävä aloitettu 1.3.2024 klo 10:16.
 
-### Karvinen 2021: Django 4 Instant Customer Database Tutorial
+# Tekstitiivistelmät
+
+## Karvinen 2021: Django 4 Instant Customer Database Tutorial
 - Django on Python-pohjainen laajasti käytetty verkkokehys (framework)
 - Django-projektit ovat yleensä "isoja", esimerkiksi nettisivusto
 - Artikkelissa kuvataan, miten saadaan käyttöön Djangon valmiina tarjoilema hallintanäkymä (perusasioita mm. login ja käyttäjien hallinta tietokannassa)
 
-### Karvinen 2021: Deploy Django 4 - Production Install
-- Django pyörii virtuaaliympäristössä (VirtualEnv), joka pitää asentaa virtuaalikoneelle erikseen. Sen jälkeen Django asennetaan tähän virtuaaliympäristöön.
-- Django-projektin conf-tiedostoon tulee määrityksiä, jotka on helpointa kertoa muuttujilla. Muuttujat määritellään conf-tiedoston yläreunassa, jonka jälkeen niitä käytetään tekstissä muodossa ${muttuja}.
-- Sivustolta pitää ehdottomasti ottaa pois päältä sivulle tietoa rekisteröivä DEBUG-ominaisuus, jotta tietoja ei voi käyttää väärin. DEBUG-listaus syö myös jatkuvasti muistia/tehoa, mikä voi työelämässä olla olennainen ongelma.
+## Karvinen 2021: Deploy Django 4 - Production Install
 
-## Djangon käyttöönotto
+# Djangon käyttöönotto
 
 Toimin sivun [Deploy Django](https://terokarvinen.com/2022/deploy-django/?fromSearch=django) ohjeiden mukaan.
 
@@ -44,9 +46,11 @@ Selaimen pääsyoikeudet näkee, kun hakee sivun tietoja curlilla.
 
 *HUOM: Tässä tapauksessa on merkitystä sillä, että osoitteen perässä on kautta-merkki. Koska en tajunnut laittaa sitä, luulin, että sivu ei toimi. Sen jälkeen käytin paljon aikaa vianselvitykseen: *
 
-### Vianselvitys
+(Karvinen 2021 b.)
 
-#### Selaimessa osoitteena vahingossa http://localhost/static (ei kautta-merkkiä)
+## Vianselvitys
+
+### Selaimessa osoitteena vahingossa http://localhost/static (ei kautta-merkkiä)
 
 Tarkistin apachen version komennolla ```sudo apachectl status```. Versio on 2.4.57.
 ![image](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/pingviini6/apversion.JPG)
@@ -70,14 +74,20 @@ Yritin korjata tätä komennoilla
 Senkään jälkeen sivu http://localhost/static ei tietenkään toiminut. Virheilmoituksessa luki tällä kertaa, että "*client denied by server configuration*":
 ![image](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/pingviini6/deniedbyserver.JPG)
 
-Kysyin neuvoa kanssaopiskelijoilta opiskelijoiden WhatsAppissa. Sieltä tulikin pian neuvo, että osoitteessa pitää olla myös viimeinen kautta-merkki (WhatsApp 1.3.2024).
+Kysyin neuvoa kanssaopiskelijoilta opiskelijoiden WhatsAppissa. Sieltä tulikin pian neuvo, että osoitteessa pitää olla myös viimeinen kautta-merkki 
 
-#### Selaimessa oikea osoite http://localhost/static/
+Tehtävä lopetettu 1.3.2024 klo 13:25.
+
+### Selaimessa oikea osoite http://localhost/static/
+
+Tehtävää jatkettu 2.3.2024 klo 12:02.
 
 Sivu ei vieläkään toiminut, joten kävin tarkistamassa konfiguroinnit (```sudoedit /var/www/sites-available/suvis.conf```). Sinne oli wsgi-poluksi määrittynyt vahingossa .../suvis/suvis.py. Korjasin polun lopuksi ...suvis/wsgi.py, jonka jälkeen käynnistin Apachen uudelleen. Nyt sivu toimi.
 ![image](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/pingviini6/django_local.JPG)
 
 Komennolla ```curl -sI localhost | grep Server``` sain vielä tarkistettua, että sivua pyöritti Apache2. Komennon vastaus oli Server: Apache/2.4.57 (Debian), mikä sen kuuluikin olla.
+
+(Karvinen 2021 b., Sammakkosuo 2024., WhatsApp 2024.)
 
 ## VirtualEnv ja Django
 
@@ -99,6 +109,8 @@ Sitten tehtiin requirements.txt-tiedosto, jonne kirjoitettiin sana django. Täm�
 ```pip install -r requirements.txt```
 
 ![image](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/pingviini6/pipactivate.JPG)
+
+(Karvinen 2021 b.)
 
 ## Uusi Django-projekti
 
@@ -131,6 +143,7 @@ Ilmoitin muutokset Apachelle komennolla ```touch suvis/wsgi.py``` ja käynnistin
 Tämän jälkeen osoite http://localhost/admin toimi (muttei varsinaisesti tehnyt mitään):
 ![image](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/pingviini6/localhost_admin.JPG)
 
+(Karvinen 2021 b.)
 
 ## Stylesheet 
 
@@ -144,17 +157,85 @@ Jotta pääsin kirjautumaan sisään, tein uuden pääkäyttäjän. Sitä ennen 
 
 Superuser luotiin komennolla ```./manage.py createsuperuser```
 
+(Karvinen 2021 b.)
+
+Tehtävät lopetettu 2.3.2024 klo 14:48.
 
 ## Instant Customer DB
 
+Tehtävä aloitettu 3.3. klo 19:04.
 
-Kävin katsomassa konffitiedostoa ```sudoedit /etc/apache2/mods-available/alias.conf```, mutta siellä oli kaikk ikunnossa (Require all granted)
+Suurin osa sivuston [Django CRM](https://terokarvinen.com/2022/django-instant-crm-tutorial/) listaamista toimista oli jo tehty aiemmassa harjoituksessa (yllä). Pystyin siis skippaamaan ohjeita ensiksi "Hello DJ Ango"-osioon asti.
 
-Tiedostoon suvis/suvis/settings.py piti laittaa sallittuihin hosteihin vielä erikseen "127.0.0.1". 
+Jostain syystä projekti ei avautunut oikealla URL:illa.  Kävin katsomassa konffitiedostoa ```sudoedit /etc/apache2/mods-available/alias.conf```, mutta siellä oli kaikki kunnossa (Require all granted).
+
+Arvelin, että ehkä selain ei tunnista harjoituksessa annettua osoitetta http://127.0.0.1:8000 VAIKKA settings.py:ssä oli jo annettu sallituksi hostiksi "localhost". Laitoin suvis/suvis/settings.py -tiedostoon vielä erikseen "127.0.0.1".
 ![image](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/pingviini6/allowedhosts.JPG)
 
+Sen jälkeen etusivu lähti toimimaan. Sivustolle localhost oli jo ylempänä määritelty admin, joten en luonut toista. Myös tyylisivu oli haettu, joten en tarvinnut sitäkään. Osoitteessa http://127.0.0.1:8000 tyylisivu ei jostain syystä näytä toimivan, mutta osoitteessa localhost toimii sattumalta tyylisivu sekä koko CRM. En tiedä, miten sivut menevät sekaisin.
+
+(Karvinen 2021 a.)
+
+## CRM
+
+Ensiksi loin ohjeiden mukaan projektin ```./manage.py startapp crm``` Tämä teki crm-sovellukseen valmiiksi crm/ -kansion. Projektin nimi ('crm') piti lisätä tiedostoon suvis/settings.py kohtaan INSTALLED_APPS.
+
+Sen jälkeen loin Customer-mallin crm/models.py -tiedostoon. Komennot:
+
+> ```from django.db import models```  
+
+class Customer(models.Model):  
+   name = models.CharField(max_length=300)  
+     
+   Näiden alle kirjoitetaan:  
+   def __str__(self):  
+		return self.name  
+   
+Lisätyt mallit luovat automaattisesti taulun tietokantaan. Tauluun rakentui sarake "name". 
+Funktion "__str__" määrittelyllä saadaan asiakaslistassa näkymään objektin nimi-ominaisuus ("Suvi Sammakkosuo"). Ilman tätä listassa lukisi taulun nimi+id (esim. "Customer 1").
+
+"Tallennetaan" muutokset:
+
+> ```$ ./manage.py makemigrations```  
+```./manage.py migrate```  
+
+Tämän jälkeen rekisteröin vielä muutokset admin.py -tiedostossa:
+
+> ```crm/admin.py```  
+from django.contrib import admin  
+from . import models  
+  
+admin.site.register(models.Customer)  
+
+
+Näiden jälkeen sivusto (sis. Customer-lista) näkyy osoitteessa localhost/admin/:
+
+![image](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/pingviini6/local_adm.JPG)
+
+...mutta ei osoitteessa http://127.0.0.1:8000/admin/
+
+![image](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/pingviini6/127admin.JPG)
+
+En tiedä, mistä tämä johtuu.
+
+(Karvinen 2021 a.)
+
+Tehtävä lopetettu 3.3. klo 20:11.
+
+#### Palomuuri
 
 (Tajusin jossain vaiheessa tehtävää, että olin tehnyt uuden virtuaalikoneen. Siinä ei ollut palomuuri vielä päällä, joten asensin sen.)
 Palomuuri: 
 
 ![image](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/pingviini6/palomuuri1.JPG)
+
+
+## Lähteet:
+
+Karvinen 2021 a. Django 4 Instant Customer Database Tutorial. Luettavissa: https://terokarvinen.com/2022/django-instant-crm-tutorial/ Luettu 2.3.2024.
+
+Karvinen 2021 b. Deploy Django 4 - Production Install. Luettavissa https://terokarvinen.com/2022/deploy-django/?fromSearch=django Luettu 1.3.2024.
+
+Sammakkosuo Petri 2024. Suullinen tiedontanto 2.3.2024.
+
+WhatsApp 2024. Suullinen tiedonanto 1.3.2024: Osallistuja nimeltä Ilona. 
