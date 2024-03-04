@@ -1,11 +1,12 @@
-# Django 3 setuo
+# Django 3 setup
 
-Käytetyn koneen speksit:
-Kone: Dell Latitude 7280
-Suoritin: Intel(R) Core(TM) i7-7600U CPU @ 2.80GHz 2.90 GHz
-Asennettu RAM: 16,0 Gt
-Windowsin määritykset: Windows 10 Pro, versio 22H2
+> Käytetyn koneen speksit:  
+Kone: Dell Latitude 7280  
+Suoritin: Intel(R) Core(TM) i7-7600U CPU @ 2.80GHz 2.90 GHz  
+Asennettu RAM: 16,0 Gt  
+Windowsin määritykset: Windows 10 Pro, versio 22H2  
 
+## Djangon käyttöönotto
 
 Toimin sivun [Deploy Django](https://terokarvinen.com/2022/deploy-django/?fromSearch=django) ohjeiden mukaan.
 
@@ -42,6 +43,7 @@ Ensin selain ilmoitti, että "*file does not exist*".
 ![image](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/pingviini6/noexist.JPG)
 
 Sain virheen myös access rightseista.
+
 ![image](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/pingviini6/forbidden.JPG)
 
 Tiedosto oli olemassa, ja alemman virheen vuoksi ajattelin, että selain ei vain pääse kansioon.
@@ -65,7 +67,7 @@ Sivu ei vieläkään toiminut, joten kävin tarkistamassa konfiguroinnit (```sud
 
 Komennolla ```curl -sI localhost | grep Server``` sain vielä tarkistettua, että sivua pyöritti Apache2. Komennon vastaus oli Server: Apache/2.4.57 (Debian), mikä sen kuuluikin olla.
 
-### VirtualEnv ja Django
+## VirtualEnv ja Django
 
 Seuraavaksi piti asentaa virtuaaliympäristö VirtualEnv ja asentaa sinne Django:
 
@@ -86,7 +88,7 @@ Sitten tehtiin requirements.txt-tiedosto, jonne kirjoitettiin sana django. Täm�
 
 ![image](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/pingviini6/pipactivate.JPG)
 
-### Uusi Django-projekti
+## Uusi Django-projekti
 
 Django-projekti aloitetaan suorittamalla komento 
 
@@ -110,7 +112,7 @@ Sain onnistumisviestin:
 ![image](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/pingviini6/django_local.JPG)
 
 Seuraavaksi laitettiin nettiin publicwsgi/nimi/nimi/settings.py:ssä näkyvä debug pois päältä (DEBUG = False) ja määriteltiin sallitut hostit: 
-![image](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/pingviini6/allowed_hosts.JPG)
+![image](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/pingviini6/allowedhosts.JPG)
 
 Ilmoitin muutokset Apachelle komennolla ```touch suvis/wsgi.py``` ja käynnistin Apachen uudelleen ```sudo systemctl restart apache2```
 
@@ -118,7 +120,7 @@ Tämän jälkeen osoite http://localhost/admin toimi (muttei varsinaisesti tehny
 ![image](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/pingviini6/localhost_admin.JPG)
 
 
-### Stylesheet 
+## Stylesheet 
 
 Seuraavaksi hain sivustolle käytettäväksi stylesheetin. Ensin suvis/settings.py, jonne lisättiin static root ```STATIC_ROOT = os.path.join(BASE_DIR, 'static/')```. Sen lisäksi piti importteihin lisätä "import os". Sitten CSS otettiin käyttöön komennolla ```./manage.py collectstatic``` ("yes"). Sivuston ulkoasu muuttui:
 
