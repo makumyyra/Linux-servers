@@ -6,6 +6,18 @@ Suoritin: Intel(R) Core(TM) i7-7600U CPU @ 2.80GHz 2.90 GHz
 Asennettu RAM: 16,0 Gt  
 Windowsin määritykset: Windows 10 Pro, versio 22H2  
 
+## Tekstitiivistelmät
+
+### Karvinen 2021: Django 4 Instant Customer Database Tutorial
+- Django on Python-pohjainen laajasti käytetty verkkokehys (framework)
+- Django-projektit ovat yleensä "isoja", esimerkiksi nettisivusto
+- Artikkelissa kuvataan, miten saadaan käyttöön Djangon valmiina tarjoilema hallintanäkymä (perusasioita mm. login ja käyttäjien hallinta tietokannassa)
+
+### Karvinen 2021: Deploy Django 4 - Production Install
+- Django pyörii virtuaaliympäristössä (VirtualEnv), joka pitää asentaa virtuaalikoneelle erikseen. Sen jälkeen Django asennetaan tähän virtuaaliympäristöön.
+- Django-projektin conf-tiedostoon tulee määrityksiä, jotka on helpointa kertoa muuttujilla. Muuttujat määritellään conf-tiedoston yläreunassa, jonka jälkeen niitä käytetään tekstissä muodossa ${muttuja}.
+- Sivustolta pitää ehdottomasti ottaa pois päältä sivulle tietoa rekisteröivä DEBUG-ominaisuus, jotta tietoja ei voi käyttää väärin. DEBUG-listaus syö myös jatkuvasti muistia/tehoa, mikä voi työelämässä olla olennainen ongelma.
+
 ## Djangon käyttöönotto
 
 Toimin sivun [Deploy Django](https://terokarvinen.com/2022/deploy-django/?fromSearch=django) ohjeiden mukaan.
