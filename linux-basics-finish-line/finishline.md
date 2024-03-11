@@ -204,7 +204,7 @@ Esimerkkiajo kolmella eri käyttäjällä:
 
 ![image](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/finishline7/labra2/hello_ajo.JPG)
 
-Tehtävänanto 3/4
+Tehtävänanto 3/4:
 
 > ## SneakyGarden.Example.com  
 Virallinen ninjaliikesivumme tulee Eijan ylläpidettäväksi. Tee Eijalle valmis esimerkkisivu, jossa tietokannassa on seuraavat esimerkkiliikkeet vaikeustasoineen  
@@ -326,6 +326,6 @@ Asensin koneelle dist-upgradet ja palomuurin:
 ```sudo ufw allow ssh```
 ```sudo ufw status```
 
-![image](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/finishline7/labra2/palomuuri/.JPG)
+![image](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/finishline7/labra2/palomuuri.JPG)
 
 Tämän jälkeen lopetin tehtävät. En ottanut aikaa, mutta sitä meni arviolta noin 5-6 h. Sen lisäksi yritän vielä selvittää nettisivuongelman (eli miksi en saa luotua nettisivuja käyttäjille).
