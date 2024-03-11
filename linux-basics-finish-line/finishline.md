@@ -171,7 +171,8 @@ Sitten avasin userdir:in:
 ```sudo nano /etc/apache2/mods-available/userdir.conf```
 
 Sieltä näkyi, että käyttäjien html-kansion nimen pitää olla public_html:
-![image](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/finishline7/userdirconf/.JPG)
+
+![image](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/finishline7/userdirconf.JPG)
 
 
 
@@ -182,18 +183,18 @@ Vaihdoin labraharjoituksesta [toiseen](https://terokarvinen.com/2017/arvioitava-
 
 Tehtävänanto 1/4:
 
-> ### Käyttäjät  
+> ## Käyttäjät  
 Työntekijämme ovat toimitusjohtaja Nakke Nertola, Håkan Värs, Einari Mikkonen, Einari Öljysaari ja Eija Vähäkäähkä. Tee kaikille käyttäjille esimerkkikotisivut.  
   
-### Suuri muuri  
-Suojaa kone tulimuurilla.  
+> ## Suuri muuri    
+Suojaa kone tulimuurilla.   
 
 Jatkoin saman koneen käyttämistä, jota käytin ensimmäisessä harjoituksessa. Siihen oli jo luotu kaikki tarvittavat käyttäjät ja palomuuri, joten näitä ei tarvinnut tehdä erikseen.
 
 Tehtävänanto 2/4:
 
-### WhoWhere
-Tee kaikkien käyttäjien käyttöön komento, joka tulostaa Ninjamaisen tervehdyksen “Hello Ninja”, koneen IP-osoitteen ja komentoa ajavan käyttäjän nimen.
+> ## WhoWhere  
+Tee kaikkien käyttäjien käyttöön komento, joka tulostaa Ninjamaisen tervehdyksen “Hello Ninja”, koneen IP-osoitteen ja komentoa ajavan käyttäjän nimen.  
 
 Koodi:
 
@@ -205,7 +206,7 @@ Esimerkkiajo kolmella eri käyttäjällä:
 
 Tehtävänanto 3/4
 
-> ### SneakyGarden.Example.com  
+> ## SneakyGarden.Example.com  
 Virallinen ninjaliikesivumme tulee Eijan ylläpidettäväksi. Tee Eijalle valmis esimerkkisivu, jossa tietokannassa on seuraavat esimerkkiliikkeet vaikeustasoineen  
   
 Hyppykiertopotku 27  
@@ -276,6 +277,7 @@ Curl-kyselyllä sivun tuloksena tulee "Bad Request - Your browser sent a request
 
 
 Lisäksi eijav/public_html/index.html ei ole käyttäjän eijav muokattavissa. En tiedä, miten asian saisi korjattua. 
+
 TODO: Etsi joku, joka osaa auttaa. Selasin nettiä todella kauan saadakseni tämän toimimaan. Tarvitsen kuitenkin jonkun osaajan neuvomaan konkreettisesti.
 
 
@@ -283,7 +285,7 @@ TODO: Etsi joku, joka osaa auttaa. Selasin nettiä todella kauan saadakseni täm
 
 Näiden jälkeen tein vielä kokeen tiistain tenttiä varten.
 
-![image](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/finishline7/labra2/tenttikone/.JPG)
+![image](https://raw.githubusercontent.com/makumyyra/Linux-servers/main/md_images/finishline7/labra2/tenttikone.JPG)
 
 Valinnat:
 
